@@ -465,7 +465,7 @@
                     <h2 class="playlist-title">Precious Memories Collection</h2>
                     <p class="playlist-description">MEMORIS BUAT DI TREASURE</p>
                     <div class="playlist-stats">
-                        <span><i class="fas fa-images"></i> 8 photos</span>
+                        <span><i class="fas fa-images"></i> 15 photos</span>
                         <span><i class="far fa-calendar"></i> From your birthday</span>
                         <span><i class="fas fa-heart"></i> Special moments</span>
                     </div>
@@ -486,7 +486,7 @@
             <div class="photos-container">
                 <div class="photos-header">
                     <h3 class="photos-title">Memory Gallery</h3>
-                    <span class="photo-count">8 photos</span>
+                    <span class="photo-count">15 photos</span>
                 </div>
                 
                 <div class="photos-grid">
@@ -537,6 +537,48 @@
                         <div class="photo-number">8</div>
                         <img src="images/awa8.jpg" alt="Smiles">
                     </div>
+
+                    <!-- Photo 9 -->
+                    <div class="photo-item" data-photo="9">
+                        <div class="photo-number">9</div>
+                        <img src="images/awa9.jpg" alt="Smiles">
+                    </div>
+
+                    <!-- Photo 10 -->
+                    <div class="photo-item" data-photo="10">
+                        <div class="photo-number">10</div>
+                        <img src="images/awa10.jpg" alt="Smiles">
+                    </div>
+
+                    <!-- Photo 11 -->
+                    <div class="photo-item" data-photo="11">
+                        <div class="photo-number">11</div>
+                        <img src="images/awa11.jpg" alt="Smiles">
+                    </div>
+
+                    <!-- Photo 12 -->
+                    <div class="photo-item" data-photo="12">
+                        <div class="photo-number">12</div>
+                        <img src="images/awa12.jpg" alt="Smiles">
+                    </div>
+
+                    <!-- Photo 13 -->
+                    <div class="photo-item" data-photo="13">
+                        <div class="photo-number">13</div>
+                        <img src="images/awa13.jpg" alt="Smiles">
+                    </div>
+
+                    <!-- Photo 14 -->
+                    <div class="photo-item" data-photo="14">
+                        <div class="photo-number">14</div>
+                        <img src="images/awa14.jpg" alt="Smiles">
+                    </div>
+
+                    <!-- Photo 15 -->
+                    <div class="photo-item" data-photo="15">
+                        <div class="photo-number">15</div>
+                        <img src="images/awa15.jpg" alt="Smiles">
+                    </div>
                 </div>
                 
                 <button class="view-button" id="viewAllPhotos">
@@ -574,7 +616,7 @@
     </div>
 
     <script>
-        // Photo data with captions
+        // Photo data with captions - UPDATED TO INCLUDE ALL 15 PHOTOS
         const photoData = [
             {
                 src: "images/awa1.jpg",
@@ -615,6 +657,41 @@
                 src: "images/awa8.jpg",
                 alt: "awa8",
                 caption: ""
+            },
+            {
+                src: "images/awa9.jpg",
+                alt: "awa9",
+                caption: ""
+            },
+            {
+                src: "images/awa10.jpg",
+                alt: "awa10",
+                caption: ""
+            },
+            {
+                src: "images/awa11.jpg",
+                alt: "awa11",
+                caption: ""
+            },
+            {
+                src: "images/awa12.jpg",
+                alt: "awa12",
+                caption: ""
+            },
+            {
+                src: "images/awa13.jpg",
+                alt: "awa13",
+                caption: ""
+            },
+            {
+                src: "images/awa14.jpg",
+                alt: "awa14",
+                caption: ""
+            },
+            {
+                src: "images/awa15.jpg",
+                alt: "awa15",
+                caption: ""
             }
         ];
 
@@ -646,11 +723,14 @@
         
         // Show photo in modal
         function showModalPhoto(index) {
-            const photo = photoData[index];
-            modalImg.src = photo.src;
-            modalImg.alt = photo.alt;
-            modalCaption.textContent = photo.caption;
-            modal.style.display = 'flex';
+            // Check if index is valid
+            if (index >= 0 && index < photoData.length) {
+                const photo = photoData[index];
+                modalImg.src = photo.src;
+                modalImg.alt = photo.alt;
+                modalCaption.textContent = photo.caption;
+                modal.style.display = 'flex';
+            }
         }
         
         // Close modal
